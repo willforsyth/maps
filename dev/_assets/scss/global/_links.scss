@@ -1,0 +1,28 @@
+.link, a {
+    text-decoration: underline;
+    color: $color__black;
+    font-family: $font-weight-semibold;
+
+    &:hover {
+        text-decoration: none;
+    }
+    &:visited {
+        text-decoration: none;
+        color: $color__black;
+    }
+    &:active {
+        text-decoration: none;
+        color: $color__black;
+    }
+}
+
+.link--underline {
+    text-decoration: underline;
+}
+
+.link--large {
+  clear: both;
+  display: block;
+  font-family: $font-weight-semibold;
+  text-transform: uppercase;
+}

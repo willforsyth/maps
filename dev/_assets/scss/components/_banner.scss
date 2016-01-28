@@ -1,0 +1,153 @@
+/*
+ *
+ * Styles for banner.html
+ *
+ */
+
+.banner {
+	width: 100%;	
+	height: auto;
+	overflow: hidden;
+
+	@media screen and (max-width: 88em) {
+		height: 33.75em;
+		margin-bottom: 0.5em;
+	}
+
+	@media screen and (max-width: 26.25em) {
+	    height: 26.25em;
+	}
+
+	@media screen and (max-width: 22.5em) {
+	    height: 22.5em;
+	}
+}
+
+.banner__image-wrap {
+	position: relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	@media screen and (max-width: 88em) {
+		background-size: cover;
+	    width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	@media screen and (max-width: 26.25em) {
+	    height: 26.25em;
+	}
+
+	@media screen and (max-width: 22.5em) {
+	    height: 22.5em;
+	}
+}
+
+.banner__image {
+	max-width: 100%;
+
+	@media screen and (max-width: 88em) {
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    min-width: 1420px;
+	    min-height: 100%;
+	    height: auto;
+	    z-index: 0;
+	    transform: translate(-50%, -50%);
+	}
+
+	@media screen and (max-width: 26.25em) {
+	    height: 26.25em;
+	}
+
+	@media screen and (max-width: 22.5em) {
+	    height: 22.5em;
+	}
+}
+
+.banner__content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-origin: center;
+	width: 90%;
+	height: auto;
+	padding-bottom: 90%;
+	background: $color__white;
+	opacity: 0.9;
+	border-radius: 50%;	
+	text-align: center;
+
+	@media screen and (min-width: 500px) {
+		width: 80%;
+		padding-bottom: 80%;
+	}
+
+	@include breakpoint(small) {
+		width: 440px;
+		padding-bottom: 440px;
+	}
+
+	@include breakpoint(extra-large) {
+		width: 35%;
+		padding-bottom: 35%;
+	}
+
+	@media screen and (min-width: 1520px) {
+		width: 32%;
+		padding-bottom: 32%;
+	}
+}
+
+.banner__content__title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	width: 195px;
+	font-size: 1.5em;
+	line-height: 1;
+
+	@media screen and (min-width: 435px) {
+		font-size: 2em;
+		width: 255px;
+	}
+
+	@media screen and (min-width: 565px) {
+		font-size: 2.375em;
+		width: 295px;
+	}
+
+	@include breakpoint(extra-large) {
+		font-size: 2.75em;
+		width: 355px;
+	}
+
+	@media screen and (min-width: 1610px) {
+		font-size: 3em;
+		width: 385px;
+	}
+}
+
+.banner__content__link {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 0.875em;
+
+
+	@media screen and (min-width: 435px) {
+		font-size: 1.25em;
+	}
+
+	@media screen and (min-width: 1610px) {
+		top: 75%;
+		font-size: 1.375em;
+	}
+}

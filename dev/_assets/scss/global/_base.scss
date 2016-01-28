@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    color: $color__black;
+    background-color: $color__white;
+    position: relative;
+
+}
+
+html,
+body{
+    width: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+
+// Page load styles when javascript is disabled
+html.no-js {
+    opacity: 1;
+
+    body {
+       opacity: 1; 
+    }
+}
+
+body {
+    max-width: 106.25em;
+    margin: 0 auto;
+    padding: 0 1em;
+
+    @include breakpoint(large) {
+        padding: 0 3em;
+    }
+}
+
+body.header-border {
+    .header {
+        border-bottom: 1px solid;
+    }
+}
+
+%wrapper{
+    max-width: map-get($breakpoints, large);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $ratio#{em};
+}
+
+.wrapper{
+    @extend %wrapper;
+}
+
+.hide{
+    display: none;
+}

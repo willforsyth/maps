@@ -1,0 +1,22 @@
+/*
+ *
+ * Styles for footer.html
+ *
+ */
+
+.footer {
+	clear: both;
+	border-top: 1px solid $color__black;
+	margin-top: 1 + $ratio#{em};
+	padding-top: 1.5 + $ratio#{em};
+	padding-bottom: 1.5 + $ratio#{em};
+}
+
+.footer__nav {
+	font-size: 0.75em;
+}
+
+.footer__text {
+	max-width: 100%;
+	margin-bottom: 0;
+}

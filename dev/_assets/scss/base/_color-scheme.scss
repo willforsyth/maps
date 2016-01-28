@@ -1,0 +1,51 @@
+// Main Colors
+// --------------------------------------------------
+// Generic site colours
+$color__black : #1D1D1B;
+$color__gray : #999;
+$color__lightgrey: #EDEDED;
+$color__white : #fff;
+
+// Different section colours
+$color__news: #374d5c;
+$color__about-us: #198fa7;
+$color__careers: #941d14;
+$color__trends: #f6a335;
+
+// Unused colours
+$color__blue: #228FA6;
+$color__darkblue: #374D5B;
+$color__red: #921D14;
+$color__yellow: #921D14;
+
+
+//example of colors and there usage
+$color__blue: #3498db;
+$color__blue--light: lighten($color__blue, 20%);
+$color__blue--dark: darken($color__blue, 20%);
+
+$color__red: #c0392b;
+$color__red--light: lighten($color__red, 20%);
+$color__red--dark: darken($color__red, 20%);
+
+$color__green: #27ae60;
+$color__green--light: lighten($color__green, 20%);
+$color__green--dark: darken($color__green, 20%);
+
+$color__purple: #8e44ad;
+$color__purple--light: lighten($color__purple, 20%);
+$color__purple--dark: darken($color__purple, 20%);
+
+
+// Brand Colors
+// --------------------------------------------------
+$color__twitter : #00acee;
+$color__facebook : #3b5998;
+
+
+// Scheme
+// --------------------------------------------------
+$color__positive : $color__green;
+$color__negative : $color__red;
+
+$color__primary : $color__gray;

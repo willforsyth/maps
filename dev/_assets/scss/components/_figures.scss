@@ -1,0 +1,19 @@
+.figure {
+  margin: 1.5 + $ratio#{em} 0;
+  @extend .clearfix;
+}
+
+.figure--img {
+  border-radius: 10em;
+  float: left;
+  margin-right: $ratio--inv#{em};
+}
+
+.figurecap {
+  float: left;
+  display: block;
+  font-size: 0.1 + $ratio--inv#{em};
+  font-family: $font-weight-light;
+  line-height: 1.4em;
+  margin-top: 3.5%;
+}

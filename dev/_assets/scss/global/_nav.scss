@@ -1,0 +1,42 @@
+.nav {
+	@media screen and (max-width: 1150px) {
+		overflow-y: scroll;
+	}
+	
+	a {
+		text-decoration: none;
+	 	
+	 	&:hover, .active {
+	    	text-decoration: underline;
+	   	}
+	}
+}
+
+.nav__ul {
+
+}
+
+.nav__li {
+	opacity: 1;
+	display: inline-block;
+	list-style: none;
+
+	&:after {
+		content: "/";
+		padding: 0 10px;
+	}
+
+	&:last-of-type {
+		&:after {
+			content: "";
+			padding: 0;
+		}
+	}
+}
+
+.nav__li--header {
+	@media screen and (max-width: 1150px) {
+		opacity: 0;
+		transition: 0.6s ease-out;
+	}
+}

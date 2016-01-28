@@ -1,0 +1,35 @@
+.article__inner {
+  padding: 1 + $ratio#{em} $ratio#{em};
+  p {
+    margin: $ratio#{em} 0;
+  }
+}
+
+article, header {
+  img{
+    width: 100%;
+  }
+}
+
+.article__time {
+  float: right;
+}
+
+.article--gray {
+  background-color: $color__lightgrey;
+}
+
+.article--blue {
+  background-color: $color__darkblue;
+  color: $color__white;
+  a {
+    color: $color__white !important;
+  }
+}
+
+.related-news,
+.related-content {
+  border-top: 1px solid $color__black;
+  padding-top: 2em;
+  clear: both;
+}

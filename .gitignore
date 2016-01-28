@@ -1,0 +1,6 @@
+.vagrant
+.sass-cache
+.tmp
+.DS_store
+node_modules
+bower_components

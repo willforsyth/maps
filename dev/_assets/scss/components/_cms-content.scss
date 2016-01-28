@@ -1,0 +1,17 @@
+.content--header {
+  margin-bottom: $ratio#{em};
+}
+
+.two-columns {
+    column-count: 1;
+    @include breakpoint(medium){
+      column-count: 2;
+      column-gap: 1em;
+    }
+}
+
+.content {
+  img {
+    margin: $ratio#{em} 0;
+  }
+}

@@ -1,0 +1,85 @@
+
+// Grid Variables
+$grid__columns: 20;
+$grid__gutter-size: 2em;
+
+.grid{
+    @extend .clearfix;
+    margin-left: -1em;
+    margin-right: -1em;
+}
+
+.column{
+    float: left;
+    padding: $grid__gutter-size / 2 $grid__gutter-size / 2;
+
+    .grid--no-gutter &{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// Squared tiled grid modifiers
+.grid--tile {
+    @extend .clearfix;
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+
+    @media screen and (min-width: 500px) {
+        margin-left: -0.5em;
+        margin-right: -0.5em;
+    }
+}
+
+.column--tile {
+    @extend .column;
+    padding: $grid__gutter-size / 8 $grid__gutter-size / 8;
+
+    @media screen and (min-width: 500px) {
+        padding: $grid__gutter-size / 4 $grid__gutter-size / 4;
+    }
+}
+
+.column__center{
+    float: none !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@for $i from 1 through $grid__columns {
+    .column__#{$i}-of-#{$grid__columns}{
+        width: percentage( $i / $grid__columns );
+    }
+}
+
+@for $i from 1 through $grid__columns {
+    .column__#{$i}-of-#{$grid__columns}--small{
+        @include breakpoint(small){
+            width: percentage( $i / $grid__columns );
+        }
+    }
+}
+
+@for $i from 1 through $grid__columns {
+    .column__#{$i}-of-#{$grid__columns}--medium{
+        @include breakpoint(medium){
+            width: percentage( $i / $grid__columns );
+        }
+    }
+}
+
+@for $i from 1 through $grid__columns {
+    .column__#{$i}-of-#{$grid__columns}--large{
+        @include breakpoint(large){
+            width: percentage( $i / $grid__columns );
+        }
+    }
+}
+
+@for $i from 1 through $grid__columns {
+    .column__#{$i}-of-#{$grid__columns}--extra-large{
+        @include breakpoint(extra-large){
+            width: percentage( $i / $grid__columns );
+        }
+    }
+}

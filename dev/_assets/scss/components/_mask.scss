@@ -1,0 +1,346 @@
+// Opacity mixin
+@mixin opacity-level($alpha-opacity, $opacity) {
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=$alpha-opacity);
+  opacity: $opacity;
+}
+
+.tile {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+}
+
+.tile-hover-area,
+.tile-content-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
+.text-tile-hover:hover {
+
+  .tile-content__title {
+    text-decoration: underline;
+  }
+}
+
+.tile-image {
+   transition: all 0.2s linear;
+}
+
+.tile-hover-mask {
+  @include opacity-level(0, 0);
+  transition: all 0.4s ease-in-out;
+}
+
+.disc {
+  width: 40em;
+  height: 40em;
+  background: $color__white;
+  background: rgb(255, 255, 255);
+  background: rgba(255,255,255,0.85);
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  border-radius: 20em;
+}
+
+.disc__inner {
+  display: table;
+  height: 100%;
+  width: 75%;
+  margin: 0 19.5%;
+}
+
+.disc__content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.disc-title {
+  @include opacity-level(0, 0);
+  transform: translateY(-100px);
+  transition: all 0.2s ease-out;
+  line-height: 1;
+}
+
+.disc-subtitle {
+  @include opacity-level(0, 0);
+  transform: translateY(100px);
+  transition: all 0.2s ease-out;
+  line-height: 1;
+}
+
+.disc__icon {
+  position: relative;
+  top: -20px;
+  opacity: 0;
+  transition: 0.4s ease-out;
+}
+
+.tile-content__icon {
+  @include opacity-level(100, 1);
+  position: relative;
+  top: 2.75em;
+  width: 2.75em;
+  height: 2.75em;
+  fill: $color__white;
+  transition: all 0.2s ease-out;
+
+    // @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    //     top: -3.75em;
+    // }
+
+  @media screen and (max-width: 1507px) {
+      top: 2.5em;
+      width: 2.5em;
+      height: 2.75em;
+  }
+
+  @media screen and (max-width: 1107px) {
+      top: 2.25em;
+      width: 2.25em;
+      height: 2.75em;
+  }
+
+  @media screen and (max-width: 957px) {
+      top: 2em;
+      width: 2em;
+      height: 2.75em;
+  }
+
+  @media screen and (max-width: 831px) {
+      top: 3em;
+      width: 3em;
+      height: 2.75em;
+  }
+
+  @media screen and (max-width: 700px) {
+      top: 2.75em;
+      width: 2.75em;
+      height: 2.75em;
+  }
+
+  @media screen and (max-width: 567px) {
+      top: 2.5em;
+      width: 2.5em;
+      height: 2.75em;
+  }
+
+  @media screen and (max-width: 497px) {
+      top: 2em;
+      width: 2em;
+      height: 2.75em;
+  }
+
+  @media screen and (max-width: 417px) {
+      top: 1.5em;
+      width: 1.5em;
+      height: 2.75em;
+  }
+
+  @media screen and (max-width: 340px) {
+      top: 1.25em;
+  }
+}
+
+.tile-content__title {
+  @include opacity-level(100, 1);
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  font-size: 1.75em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: $color__white;
+  transition: all 0.2s ease-out;
+
+  @media screen and (max-width: 1507px) {
+      font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 1407px) {
+      font-size: 1.75em;
+  }
+
+  @media screen and (max-width: 1207px) {
+      font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 1107px) {
+      font-size: 1.25em;
+  }
+
+  @media screen and (max-width: 907px) {
+      font-size: 1.125em;
+  }
+
+  @media screen and (max-width: 831px) {
+      font-size: 2em;
+  }
+
+  @media screen and (max-width: 700px) {
+      font-size: 1.75em;
+  }
+
+  @media screen and (max-width: 567px) {
+      font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 497px) {
+      font-size: 1.25em;
+  }
+
+  @media screen and (max-width: 417px) {
+      font-size: 1em;
+      width: 84%;
+  }
+}
+
+.tile-content__title--small {
+  @extend .tile-content__title; 
+  top: 18%;
+  font-size: 1em;
+
+  @media screen and (max-width: 1107px) {
+      font-size: 0.875em;
+  }
+
+  @media screen and (max-width: 907px) {
+      font-size: 0.75em;
+  }
+
+  @media screen and (max-width: 831px) {
+      font-size: 1.125em;
+  }
+
+  @media screen and (max-width: 700px) {
+      font-size: 1em;
+  }
+
+  @media screen and (max-width: 567px) {
+      font-size: 0.875em;
+  }
+
+  @media screen and (max-width: 497px) {
+      font-size: 0.75em;
+      width: 100%;
+  }
+}
+
+.tile-content__title--vacancy {
+  
+}
+
+.tile-content__date {
+  @extend .tile-content__title--small;
+  top: 80%;
+}
+
+// Styles for hover state
+.tile-hover-area {
+
+  &:hover {
+    .tile-image {
+      transform: scale(1.1,1.1);
+    }
+
+    .tile-hover-mask {
+      @include opacity-level(100, 1);
+    }
+
+    .disc-title,
+    .disc-subtitle {
+      @include opacity-level(100, 1);
+      transform: translateY(0px);
+    }
+
+    .disc__icon {
+      @include opacity-level(100, 1);
+      transition-delay: 0.2s;
+    }
+
+    .tile-content__icon {
+      @include opacity-level(0, 0);
+    }
+
+    .tile-content__title {
+      @include opacity-level(0, 0);
+    }
+  }
+}
+
+.disc--small {
+  margin: auto;
+  /* padding: 10px; */
+  width: 90%;
+  height: 90%;
+  z-index: 3;
+  font-size: 1em;
+  background: #fff;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.7);
+  color: $color__black;
+  border-radius: 30em;
+  top: -55%;
+  right: 0;
+  bottom: 0;
+}
+
+.disc__inner--small {
+  margin: auto;
+}
+
+.disc--small-title {
+    text-transform: uppercase;
+    padding: 1em;
+    font-size: 21px;
+    text-align: center;
+
+    h3, p {
+        font-size: 1.25em;
+        margin: 0;
+    }
+
+    @media screen and (max-width: 1057px) {
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 831px) {
+        font-size: 1.5em;
+    }
+
+    @media screen and (max-width: 657px) {
+        font-size: 1.25em;
+    }
+
+    @media screen and (max-width: 557px) {
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 557px) {
+        font-size: 0.875em;
+    }
+
+    @media screen and (max-width: 457px) {
+        font-size: 0.75em;
+    }
+}
+
+
+
+
+
+
+
+
+
+

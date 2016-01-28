@@ -1,0 +1,21 @@
+.contact-block {
+	height: auto;
+	background: $color__lightgrey;
+	text-align: center;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+.contact-block__inner {
+	width: 100%;
+	padding: 6.5em 0;
+}
+
+.contact-block__title {
+	font-size: 1.2 + $ratio#{em};
+	line-height: 1;
+
+	@include breakpoint(large) {
+		font-size: 1.6 + $ratio#{em};
+	}
+}

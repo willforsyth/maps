@@ -1,0 +1,179 @@
+// Group sets of form fields in a list.
+
+.form-fields{
+    list-style:none;
+    margin:0;
+}
+.form-fields > li{
+    margin-bottom: $ratio#{em};
+}
+.form-fields > li:last-child{
+    margin-bottom:0;
+}
+
+// Basic styles on inputs.
+
+%input{
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    padding: $ratio--inv#{em};
+    background-color: $color__white;
+    border: 1px solid $color__gray;
+    color: $color__black;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+
+    &:focus{
+        border-color: $color__black;
+        outline: none;
+    }
+
+    .error &{
+        background-color: $color__red;
+        color: $color__white;
+
+        &:focus{
+            background-color: $color__white;
+            color: $color__black;
+            border-color: $color__red;
+            outline: none;
+        }
+    }
+
+    .success &{
+        background-color: $color__green;
+        border-color: $color__green;
+        color: $color__white;
+
+        &:focus{
+            background-color: $color__white;
+            color: $color__black;
+            border-color: $color__green;
+            outline: none;
+        }
+    }
+
+    &[disabled]{
+        background: $color__gray;
+        color: $color__white;
+        cursor: not-allowed;
+    }
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+textarea,
+select{
+    @extend %input;
+}
+
+textarea{
+    resize: vertical;
+}
+
+select{
+    cursor: pointer;
+}
+
+.error{
+    .message{
+        margin: $ratio--inv#{em} 0;
+        color: $color__red;
+        fill: $color__red;
+    }
+}
+
+.success{
+    .message{
+        margin: $ratio--inv#{em} 0;
+        color: $color__green;
+        fill: $color__green;
+    }
+}
+
+// Styles for the Checkboxes and the radios
+input[type="checkbox"],
+input[type="radio"]{
+    display: none;
+
+    & ~ span {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-color: $color__gray;
+    }
+
+    & ~ label{
+        position: relative;
+        cursor: pointer;
+    }
+
+    &:checked{
+        & ~ span{
+            background: $color__green;
+        }
+    }
+}
+
+input[type="radio"]{
+    & ~ span{
+        border-radius: 100%;
+    }
+}
+
+// Optional class to add to form to create optional content
+
+.optional{
+    label:after{
+        content: " (optional)";
+    }
+}
+
+
+// Email sign up styles
+form.email-input {
+    @extend .clearfix;
+    height: 2.5em;
+}
+
+input.email-input__field {
+    display: inline-block;
+    float: left;
+    width: 80%;
+    height: 100%;
+}
+
+input.email-input__button {
+    display: inline-block;
+    float: right;
+    width: 20%;
+    height: 100%;
+    background: black url("../imgs/button-arrow.png") no-repeat center;
+    border: 1px solid $color__black;;
+
+    &:hover {
+        cursor: pointer;  
+    }
+}
+
+.email-input__label {
+    display: none;
+}
+
+.lt-ie9,
+.ie8,
+.ie9 {
+    .email-input__label {
+       display: block; 
+    }
+}

@@ -1,0 +1,48 @@
+.site-logo {
+	margin-top: 15px;
+	width: 55px;
+	height: 55px;
+
+	@include breakpoint(small) {
+		margin-top: 65px;
+	}
+}
+
+.icon{
+    display: inline-block;
+    width: $ratio#{em};
+    height: $ratio#{em};
+}
+
+// .icon--large {
+//     width: 2 + $ratio#{em}; 
+// }
+
+.icon__toolbar, .icon__scale{
+	width: 2 + $ratio#{em};
+	fill: $color__gray;
+	stroke: $color__gray;
+}
+
+.social-icon__wrap {
+	width: auto;
+	height: auto;
+	float: none;
+	margin-top: 0.5em;
+
+	@include breakpoint(medium) {
+		float: right;
+	}
+}
+
+.social-icon {
+	width: 35px;
+	height: 35px;
+	fill: $color__black;
+	margin-left: 3px;
+	transition: 0.3s;
+
+	&:hover {
+		fill: $color__gray;
+	}
+}

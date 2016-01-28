@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 7]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="keywords" content="">
+
+    <title>{% if page.title %}{{ page.title }}{% endif %}</title>
+
+    <link rel="stylesheet" media="all" href="/css/screen.css">
+    <link rel="stylesheet" media="all" href="/css/patterns.css">
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+        <!-- build:js /scripts/ie8.js -->
+            <script src="/bower_components/respond/dest/respond.min.js"></script>
+            <script src="/bower_components/svg4everybody/svg4everybody.ie8.min.js"></script>
+        <!-- /build -->
+    <![endif]-->
+
+    <!-- build:js /scripts/vendor/modernizr.js -->
+        <script src="/../bower_components/modernizr/modernizr.js"></script>
+    <!-- /build -->
+</head>
+<body>
+    <div class="pattern__wrapper">
+        {{ content }}
+    </div>
+    <script src="/scripts/common.js"></script>
+    <script src="/scripts/pattern.js"></script>
+    <!-- build:js /scripts/vendor/svg4everybody.js -->
+        <script src="/../bower_components/svg4everybody/svg4everybody.js"></script>
+    <!-- /build -->
+</body>
+</html>

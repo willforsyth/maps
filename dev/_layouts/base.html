@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 7]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
+    <meta name="keywords" content="">
+
+    <title>{% if page.title %}{{ page.title }}{% endif %}</title>
+
+    <link rel="stylesheet" media="all" href="/css/screen.css">
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?"></script>
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+        <!-- build:js /scripts/ie8.js -->
+            <script src="/bower_components/respond/dest/respond.min.js"></script>
+            <script src="/bower_components/svg4everybody/svg4everybody.ie8.min.js"></script>
+        <!-- /build -->
+    <![endif]-->
+
+    <!-- build:js /scripts/vendor/modernizr.js -->
+        <script src="/../bower_components/modernizr/modernizr.js"></script>
+    <!-- /build -->
+</head>
+<body class="{% if page.class %}{{ page.class }}{% endif %}">
+    <div class="page-load"></div>
+    {{ content }}
+    <script src="/scripts/common.js"></script>
+    <script src="/scripts/freewall.js"></script>
+    <!-- build:js /scripts/vendor/svg4everybody.js -->
+        <script src="/../bower_components/svg4everybody/svg4everybody.js"></script>
+    <!-- /build -->
+</body>
+</html>

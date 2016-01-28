@@ -1,0 +1,17 @@
+{
+  "name": "pattern-library-template",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "jquery": "~1.11.0",
+    "respond": "~1.4.2",
+    "requirejs": "~2.1.15",
+    "html5shiv": "~3.7.2",
+    "svg4everybody": "~1.0.0",
+    "js-md5": "~1.1.0",
+    "freewall": "~1.0.5",
+    "jquery-cycle2": "~2.1.6",
+    "typed.js": "~1.1.1"
+  },
+  "devDependencies": {}
+}
