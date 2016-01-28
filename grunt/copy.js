@@ -31,7 +31,7 @@ module.exports = {
             dot: true,
             cwd: 'dev/_assets/',
             dest: '.tmp',
-            src: 'json/{,*/}*.json'
+            src: 'json/{,*/}*.{json,geojson}'
         }]
     },
      dist:{
